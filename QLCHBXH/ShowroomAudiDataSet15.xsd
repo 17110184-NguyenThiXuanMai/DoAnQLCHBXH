@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ShowroomAudiDataSet15" targetNamespace="http://tempuri.org/ShowroomAudiDataSet15.xsd" xmlns:mstns="http://tempuri.org/ShowroomAudiDataSet15.xsd" xmlns="http://tempuri.org/ShowroomAudiDataSet15.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ShowroomAudiConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ShowroomAudiConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QLCHBXH.Properties.Settings.GlobalReference.Default.ShowroomAudiConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vBaoHiemTableAdapter" GeneratorDataComponentClassName="vBaoHiemTableAdapter" Name="vBaoHiem" UserDataComponentName="vBaoHiemTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ShowroomAudiConnectionString (Settings)" DbObjectName="ShowroomAudi.dbo.vBaoHiem" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaBH, GoiBaoHiem FROM dbo.vBaoHiem</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaBH" DataSetColumn="MaBH" />
+              <Mapping SourceColumn="GoiBaoHiem" DataSetColumn="GoiBaoHiem" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ShowroomAudiDataSet15" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ShowroomAudiDataSet15" msprop:Generator_UserDSName="ShowroomAudiDataSet15">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vBaoHiem" msprop:Generator_TableClassName="vBaoHiemDataTable" msprop:Generator_TableVarName="tablevBaoHiem" msprop:Generator_TablePropName="vBaoHiem" msprop:Generator_RowDeletingName="vBaoHiemRowDeleting" msprop:Generator_RowChangingName="vBaoHiemRowChanging" msprop:Generator_RowEvHandlerName="vBaoHiemRowChangeEventHandler" msprop:Generator_RowDeletedName="vBaoHiemRowDeleted" msprop:Generator_UserTableName="vBaoHiem" msprop:Generator_RowChangedName="vBaoHiemRowChanged" msprop:Generator_RowEvArgName="vBaoHiemRowChangeEvent" msprop:Generator_RowClassName="vBaoHiemRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaBH" msprop:Generator_ColumnVarNameInTable="columnMaBH" msprop:Generator_ColumnPropNameInRow="MaBH" msprop:Generator_ColumnPropNameInTable="MaBHColumn" msprop:Generator_UserColumnName="MaBH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GoiBaoHiem" msprop:Generator_ColumnVarNameInTable="columnGoiBaoHiem" msprop:Generator_ColumnPropNameInRow="GoiBaoHiem" msprop:Generator_ColumnPropNameInTable="GoiBaoHiemColumn" msprop:Generator_UserColumnName="GoiBaoHiem">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vBaoHiem" />
+      <xs:field xpath="mstns:MaBH" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

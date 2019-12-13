@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08A92C09-5ABF-487C-85BF-7FBFA655BABC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLCHBXH</RootNamespace>
+    <AssemblyName>QLCHBXH</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Library\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Presentation_Layer\BaoHiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\BaoHiem.Designer.cs">
+      <DependentUpon>BaoHiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSL_Layer\BSL_BaoHiem.cs" />
+    <Compile Include="BSL_Layer\BSL_GiamGia.cs" />
+    <Compile Include="BSL_Layer\BSL_KhachHang.cs" />
+    <Compile Include="BSL_Layer\BSL_KhoXe.cs" />
+    <Compile Include="BSL_Layer\BSL_PhuTung.cs" />
+    <Compile Include="BSL_Layer\BSL_QuanLyNhanVien.cs" />
+    <Compile Include="BSL_Layer\BSL_User.cs" />
+    <Compile Include="BSL_Layer\BSL_Xe.cs" />
+    <Compile Include="Data_Layer\DL_BaoHiem.cs" />
+    <Compile Include="Data_Layer\DL_GiamGia.cs" />
+    <Compile Include="Data_Layer\DL_KhoXe.cs" />
+    <Compile Include="Data_Layer\DL_QuanLyNhanVien.cs" />
+    <Compile Include="Data_Layer\DL_User.cs" />
+    <Compile Include="Presentation_Layer\DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\DanhSachNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\DanhSachNhanVien.Designer.cs">
+      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\GiamGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\GiamGia.Designer.cs">
+      <DependentUpon>GiamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayHoaDon.cs" />
+    <Compile Include="Presentation_Layer\Intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\Intro.Designer.cs">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\KhoXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\KhoXe.Designer.cs">
+      <DependentUpon>KhoXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\LichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\LichLamViec.Designer.cs">
+      <DependentUpon>LichLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\PhuTung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\PhuTung.Designer.cs">
+      <DependentUpon>PhuTung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Layer\DL_KhachHang.cs" />
+    <Compile Include="Data_Layer\DL_PhuTung.cs" />
+    <Compile Include="Data_Layer\DL_Xe.cs" />
+    <Compile Include="Db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\QuanLy.Designer.cs">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\SanPham.Designer.cs">
+      <DependentUpon>SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\ThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\ThongTinNhanVien.Designer.cs">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowroomAudiDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowroomAudiDataSet9.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation_Layer\BaoHiem.resx">
+      <DependentUpon>BaoHiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\DanhSachNhanVien.resx">
+      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\GiamGia.resx">
+      <DependentUpon>GiamGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\Intro.resx">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\KhoXe.resx">
+      <DependentUpon>KhoXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\LichLamViec.resx">
+      <DependentUpon>LichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\PhuTung.resx">
+      <DependentUpon>PhuTung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\QuanLy.resx">
+      <DependentUpon>QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\SanPham.resx">
+      <DependentUpon>SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\ThongTinNhanVien.resx">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db.dbml.layout">
+      <DependentUpon>Db.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ShowroomAudiDataSet.xsc">
+      <DependentUpon>ShowroomAudiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet.xss">
+      <DependentUpon>ShowroomAudiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet1.xsc">
+      <DependentUpon>ShowroomAudiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet1.xss">
+      <DependentUpon>ShowroomAudiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet10.xsc">
+      <DependentUpon>ShowroomAudiDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet10.xss">
+      <DependentUpon>ShowroomAudiDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet11.xsc">
+      <DependentUpon>ShowroomAudiDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet11.xss">
+      <DependentUpon>ShowroomAudiDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet12.xsc">
+      <DependentUpon>ShowroomAudiDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet12.xss">
+      <DependentUpon>ShowroomAudiDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet13.xsc">
+      <DependentUpon>ShowroomAudiDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet13.xss">
+      <DependentUpon>ShowroomAudiDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet14.xsc">
+      <DependentUpon>ShowroomAudiDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet14.xss">
+      <DependentUpon>ShowroomAudiDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet15.xsc">
+      <DependentUpon>ShowroomAudiDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet15.xss">
+      <DependentUpon>ShowroomAudiDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet16.xsc">
+      <DependentUpon>ShowroomAudiDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet16.xss">
+      <DependentUpon>ShowroomAudiDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet17.xsc">
+      <DependentUpon>ShowroomAudiDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet17.xss">
+      <DependentUpon>ShowroomAudiDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet18.xsc">
+      <DependentUpon>ShowroomAudiDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet18.xss">
+      <DependentUpon>ShowroomAudiDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet19.xsc">
+      <DependentUpon>ShowroomAudiDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet19.xss">
+      <DependentUpon>ShowroomAudiDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet2.xsc">
+      <DependentUpon>ShowroomAudiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet2.xss">
+      <DependentUpon>ShowroomAudiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet20.xsc">
+      <DependentUpon>ShowroomAudiDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet20.xss">
+      <DependentUpon>ShowroomAudiDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet21.xsc">
+      <DependentUpon>ShowroomAudiDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet21.xss">
+      <DependentUpon>ShowroomAudiDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet22.xsc">
+      <DependentUpon>ShowroomAudiDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet22.xss">
+      <DependentUpon>ShowroomAudiDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet23.xsc">
+      <DependentUpon>ShowroomAudiDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet23.xss">
+      <DependentUpon>ShowroomAudiDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet24.xsc">
+      <DependentUpon>ShowroomAudiDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet24.xss">
+      <DependentUpon>ShowroomAudiDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet25.xsc">
+      <DependentUpon>ShowroomAudiDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet25.xss">
+      <DependentUpon>ShowroomAudiDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet26.xsc">
+      <DependentUpon>ShowroomAudiDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet26.xss">
+      <DependentUpon>ShowroomAudiDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet27.xsc">
+      <DependentUpon>ShowroomAudiDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet27.xss">
+      <DependentUpon>ShowroomAudiDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet28.xsc">
+      <DependentUpon>ShowroomAudiDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet28.xss">
+      <DependentUpon>ShowroomAudiDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet3.xsc">
+      <DependentUpon>ShowroomAudiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet3.xss">
+      <DependentUpon>ShowroomAudiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet4.xsc">
+      <DependentUpon>ShowroomAudiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet4.xss">
+      <DependentUpon>ShowroomAudiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet5.xsc">
+      <DependentUpon>ShowroomAudiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet5.xss">
+      <DependentUpon>ShowroomAudiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet6.xsc">
+      <DependentUpon>ShowroomAudiDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet6.xss">
+      <DependentUpon>ShowroomAudiDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet7.xsc">
+      <DependentUpon>ShowroomAudiDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet7.xss">
+      <DependentUpon>ShowroomAudiDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet8.xsc">
+      <DependentUpon>ShowroomAudiDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet8.xss">
+      <DependentUpon>ShowroomAudiDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet9.xsc">
+      <DependentUpon>ShowroomAudiDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ShowroomAudiDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShowroomAudiDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShowroomAudiDataSet9.xss">
+      <DependentUpon>ShowroomAudiDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_126px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro5.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
